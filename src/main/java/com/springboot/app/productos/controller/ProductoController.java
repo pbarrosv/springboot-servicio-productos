@@ -23,12 +23,17 @@ public class ProductoController {
 	
 	@GetMapping("/ver/{id}")
 	public Producto detalle(@PathVariable Long id) {
-		boolean ok = false;
+		/*boolean ok = false;
 		
 		if(!ok) {
 			throw new RuntimeException("No se puede cargar el producto");
-		}
+		}*/
 		
+		/*try {
+			Thread.sleep(2000L);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}*/
 		return productoService.findById(id);
 	}
 }
